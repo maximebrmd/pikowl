@@ -12,7 +12,7 @@
       {
         "id": 2,
         "type": "BASIC",
-        "name": "La Casa de Papel"
+        "name": "La Casa de Poopel"
       }
     ],
     "nameOfImage": "logo.jpeg"
@@ -43,12 +43,17 @@
       {
         "id": 1,
         "type": "BASIC",
-        "name": "La Casa de Papel"
+        "name": "Dracaufeu"
       },
       {
         "id": 2,
         "type": "BASIC",
-        "name": "La Casa de Papel"
+        "name": "Pokeball"
+      },
+      {
+        "id": 2,
+        "type": "BASIC",
+        "name": "Pikachu"
       }
     ],
     "nameOfImage": "logo.jpeg"

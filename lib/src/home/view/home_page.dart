@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pikowl/src/deck/bloc/deck_bloc.dart';
+import 'package:pikowl/src/game/game.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -25,11 +26,11 @@ class HomePage extends StatelessWidget {
                 }
                 return InkWell(
                   onTap: () {
-                    /*Navigator.of(context).push(
+                    Navigator.of(context).push(
                       MaterialPageRoute<void>(
                         builder: (context) => Game(elements: e.elements),
                       ),
-                    );*/
+                    );
                   },
                   child: Image.asset('assets/imgs/${e.nameOfImage}'),
                 );
