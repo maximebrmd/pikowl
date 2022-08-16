@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Ezpz",
+    "description": "A sample game",
+    "elements": [
+      {
+        "id": 1,
+        "type": "BASIC",
+        "name": "La Casa de Papel"
+      },
+      {
+        "id": 2,
+        "type": "BASIC",
+        "name": "La Casa de Papel"
+      }
+    ],
+    "nameOfImage": "logo.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Medium",
+    "description": "A sample game",
+    "elements": [
+      {
+        "id": 1,
+        "type": "BASIC",
+        "name": "La Casa de Papel"
+      },
+      {
+        "id": 2,
+        "type": "BASIC",
+        "name": "La Casa de Papel"
+      }
+    ],
+    "nameOfImage": "logo.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Hard",
+    "description": "A sample game",
+    "elements": [
+      {
+        "id": 1,
+        "type": "BASIC",
+        "name": "La Casa de Papel"
+      },
+      {
+        "id": 2,
+        "type": "BASIC",
+        "name": "La Casa de Papel"
+      }
+    ],
+    "nameOfImage": "logo.jpeg"
+  }
+]
