@@ -1,8 +1,8 @@
-# Pikow [![Licence](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+# Pikowl [![Licence](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ___
 
-Pikow, a funny drinking app 🍻
+Pikowl, a funny drinking app 🍻
 
 ### Usage 🎨
 
@@ -13,10 +13,10 @@ and [flutter](https://docs.flutter.dev/get-started/install) installed on your co
 
 ```
 # Clone this repository
-$ git clone git@github.com:maximebrmd/pikow.git
+$ git clone git@github.com:maximebrmd/pikowl.git
 
 # Go into the repository
-$ cd pikow/
+$ cd pikowl/
 
 # Install dependencies
 $ dart pub get
@@ -38,5 +38,5 @@ ___
 
 ___
 
-Pikow is licensed under the MIT
+Pikowl is licensed under the MIT
 license. [See LICENSE for more information](https://github.com/maximebrmd/beerster/blob/main/LICENSE).
