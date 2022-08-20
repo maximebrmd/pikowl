@@ -9,30 +9,54 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Decks'),
+      ),
+      backgroundColor: Colors.red,
       body: BlocBuilder<DeckBloc, DeckState>(
         builder: (context, state) {
           if (state is DeckLoaded) {
-            return GridView(
-              shrinkWrap: true,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 5,
-                mainAxisSpacing: 5,
-                childAspectRatio: .5625,
-              ),
+            return ListView(
+              padding: const EdgeInsets.all(8),
               children: state.decks.map((e) {
-                if (e.nameOfImage == null || e.nameOfImage!.isEmpty) {
-                  return Container();
-                }
-                return InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute<void>(
-                        builder: (context) => Game(elements: e.elements),
+                return Center(
+                  child: Card(
+                    child: ListTile(
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(8),
+                        ),
                       ),
-                    );
-                  },
-                  child: Image.asset('assets/imgs/${e.nameOfImage}'),
+                      tileColor: Colors.white,
+                      leading: ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        // Image border
+                        child: SizedBox.fromSize(
+                          size: const Size.fromRadius(36), // Image radius
+                          child: Image.asset(
+                            'assets/imgs/${e.nameOfImage}',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      title: Text(
+                        e.name,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      subtitle: Text(e.description),
+                      contentPadding: const EdgeInsets.all(20),
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (context) => Game(elements: e.elements),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                 );
               }).toList(),
             );

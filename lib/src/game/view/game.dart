@@ -12,8 +12,28 @@ class Game extends StatefulWidget {
   State<Game> createState() => _GameState();
 }
 
-class _GameState extends State<Game> {
+class _GameState extends State<Game> with TickerProviderStateMixin {
   int _idx = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    /*SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+    ]);*/
+  }
+
+  @override
+  void dispose() {
+    /*SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);*/
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +54,14 @@ class _GameState extends State<Game> {
               child: Text(
                 widget.elements[_idx]['name'],
                 textAlign: TextAlign.center,
+              ),
+            ),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('Go back!'),
               ),
             ),
           ],
